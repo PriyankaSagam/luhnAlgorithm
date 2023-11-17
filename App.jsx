@@ -5,7 +5,7 @@ import './App.css'
 
 function App() {
   const [cardNumber, setCardNumber] = useState("")
-  const [isValid, setIsValid] = useState("")
+  const [isValid, setIsValid] = useState(true)
   //validCard function
   useEffect(() => {
     const validCard = (val) => {
@@ -55,7 +55,7 @@ function App() {
           maxLength={16}
 
         />
-        {isValid ? null  : <p>please enter a valid card number.</p>}
+        {isValid ?  <p>Valid card number.</p> : <p>Invalid card number.</p>}
      
         <h1>Luhn Algorithm</h1>
       </div>
